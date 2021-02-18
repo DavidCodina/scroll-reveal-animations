@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="google" value="notranslate">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="custom-animate.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Scroll Animations</title>
+</head>
+
+
+<body class="preload">
+  <header id="primary-header">
+    <nav id="primary-navbar" class="navbar navbar-expand-sm navbar-dark">
+      <div class="container-fluid">
+        <a id="brand" class="navbar-brand" href="#!">Scroll Reveal Animations</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav-menu" class="collapse navbar-collapse">
+          <div class="navbar-nav ms-auto">
+            <!-- <a class="nav-link link-light" href="#!">Link 1</a>, etc. -->
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!--  ========================================================================
+                                    main
+  ========================================================================== -->
+
+
+  <main class="py-5">
+    <section class="section">
+      <article class="article">
+        <h2 class="fancy-h2">Overview:</h2>
+
+        <p>This demo uses a <strong><em>few</em></strong> of the animations from animate.css
+        to create scroll animations. However, other animate.css can be easily brought
+        in and used. <strong>Note:</strong> Some of the animations have also been
+        modified from what they originally were.</p>
+      </article>
+    </section>
+
+
+    <section class="section animate__animated" data-enter="animate__slideInLeft" data-exit="animate__slideOutLeft">
+      <article class="article">
+        <h2 class="fancy-h2">Slide In Left:</h2>
+
+        <p class="mb-0"><strong>Gotcha:</strong> In order for the slide in and out
+        animations to go completely off screen, the animated section has to take
+        up 100% of the viewport width. Often this isn't the case with content because
+        it is inside of other containers that have horizontal padding and/or margin.
+        Thus, one either has to remove any intervening horizontal padding and/or margins,
+        or tweak the animation itself.</p>
+      </article>
+    </section>
+
+
+    <section class="section animate__animated" data-enter="animate__slideInRight" data-exit="animate__slideOutRight">
+      <article class="article">
+        <h2 class="fancy-h2">Slide In Right:</h2>
+      </article>
+    </section>
+
+
+    <div><!-- used because .half uses :first-of-type and :last-of-type -->
+      <section class="section half animate__animated" data-enter="animate__slideInLeft" data-exit="animate__slideOutLeft">
+        <article class="article">
+          <h2 class="fancy-h2">Slide In Left (Half):</h2>
+        </article>
+      </section>
+
+      <section class="section half animate__animated" data-enter="animate__slideInRight" data-exit="animate__slideOutRight">
+        <article class="article">
+          <h2 class="fancy-h2">Slide In Right (Half):</h2>
+        </article>
+      </section>
+    </div>
+
+
+    <section class="section animate__animated" data-enter="animate__backInLeft" data-exit="animate__backOutLeft">
+      <article class="article">
+        <h2 class="fancy-h2">Back In Left:</h2>
+
+        <p>As with the <code>flipInX</code> animation, this one won't get triggered
+        at the spot you might think. Because it is scaled down initially, you will
+        actually have to scroll further down.</p>
+      </article>
+    </section>
+
+
+    <section class="section animate__animated" data-enter="animate__backInRight" data-exit="animate__backOutRight">
+      <article class="article">
+        <h2 class="fancy-h2">Back In Right:</h2>
+
+        <p>As with the <code>flipInX</code> animation, this one won't get triggered
+        at the spot you might think. Because it is scaled down initially, you will
+        actually have to scroll further down.</p>
+      </article>
+    </section>
+
+
+    <section class="section animate__animated" data-enter="animate__fadeIn" data-exit="animate__fadeOut">
+      <article class="article">
+        <h2 class="fancy-h2">Fade In:</h2>
+      </article>
+    </section>
+
+
+    <section class="section animate__animated" data-enter="animate__flipInX" data-exit="animate__flipOutX">
+      <article class="article">
+        <h2 class="fancy-h2">Flip In X:</h2>
+
+        <p class="mb-0"><strong>Gotcha:</strong> Because the the section is actually rotated it won't trigger the
+        animation at exactly the same spot. Rather you will have to scroll down 50% of the section's
+        height before it does anything. Consequently, if you wer going to use this animation, you
+        might need a more elaborate scroll handler.</p>
+      </article>
+    </section>
+
+
+    <section class="section animate__animated" data-enter="animate__flipInY" data-exit="animate__flipOutY">
+      <article class="article">
+        <h2 class="fancy-h2">Flip In Y:</h2>
+
+        <p><strong>Gotcha:</strong> The problem with this animation is that when the
+        section is rotated it is actually much higher in the scroll than we want it to be.
+        This breaks the effect when the user is scrolling too slow. It can be mitigated
+        by using a very high perspective - e.g., <code>perspective(3000px)</code>) -
+        but the problem will never be entirely fixed.</p>
+
+        <p>Consequently, y-axis animations seem to be bad candidates for scroll animation,
+        unless one uses a more elaborate handler.</p>
+      </article>
+    </section>
+
+
+    <section class="section animate__animated" data-enter="animate__zoomIn" data-exit="animate__zoomOut">
+      <article class="article">
+        <h2 class="fancy-h2">Zoom In:</h2>
+
+        <p>As with the <code>flipInX</code> animation, this one won't get triggered
+        at the spot you might think. Because it is scaled down initially, you will
+        actually have to scroll further down.</p>
+      </article>
+    </section>
+  </main>
+
+
+  <!--  ========================================================================
+
+  ========================================================================== -->
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+  <script src="script.js"></script>
+</body>
+</html>
