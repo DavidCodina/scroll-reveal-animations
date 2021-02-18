@@ -19,7 +19,7 @@ let AnimateSections = {
 
     function animateSections(){
     	sections.forEach(section => {
-    		const distanceToTop     = section.getBoundingClientRect().top;
+        const distanceToTop     = section.getBoundingClientRect().top;
         const enterAnimation    = section.getAttribute('data-enter');
         const exitAnimation     = section.getAttribute('data-exit');
         // const ninetyPercent  = (window.innerHeight / 10) * 9; // i.e., is above 10% from bottom
@@ -30,14 +30,14 @@ let AnimateSections = {
         const threeQuarters     = (window.innerHeight / 4)  * 3; // i.e., is above 25% from bottom.
         // const twoThirds      = (window.innerHeight / 3)  * 2; // i.e., is above 66.66% from bottom.
         const threshold         = threeQuarters;                 // Should match default state's threshold below.
-    		if (distanceToTop < threshold){
+        if (distanceToTop < threshold){
           section.classList.remove(exitAnimation);
-    			section.classList.add(enterAnimation);
-    		} else {
+          section.classList.add(enterAnimation);
+        } else {
           section.classList.remove(enterAnimation);
-    			section.classList.add(exitAnimation);
-    		}
-    	});
+          section.classList.add(exitAnimation);
+        }
+      });
     }
     const throttled_animateSections = throttle(animateSections, 100);
 
