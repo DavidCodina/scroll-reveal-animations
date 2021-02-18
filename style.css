@@ -95,6 +95,7 @@ pre {
   display: inline-block;
   width: 50%;
   margin: 0 -2px;
+  vertical-align: top;
 }
 
 .article {
