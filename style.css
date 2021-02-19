@@ -13,9 +13,6 @@ body {
   overflow-x:hidden; /* Safari needs this to prevent horizontal scrolling. */
 }
 
-/* https://css-tricks.com/transitions-only-after-page-load/
-There was an additional note by someone in the comments section worth noting:
-Some browsers don’t understand none in the transition property. I’ve had to use transition:all 0s linear; */
 body.preload * {
   -webkit-transition: none !important;
      -moz-transition: none !important;
@@ -45,15 +42,31 @@ pre {
   overflow:scroll;
 }
 
-.fancy-h2 {
-  margin: 0 0 25px 0;
-  color: #FFF;
+.text-white-3d {
+  -webkit-text-stroke-width: 1px;                   /* Optional */
+  -webkit-text-stroke-color: rgba(150,150,150,0.5); /* Optional */
   font-size: 40px;
   font-family: Montserrat;
+  color: #FFF;
   letter-spacing: 1px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(150,150,150);
-  text-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+  text-transform: uppercase;
+  text-shadow:
+  0 1px 0 hsl(174,5%,80%),
+  0 2px 0 hsl(174,5%,75%),
+  0 3px 0 hsl(174,5%,70%),
+  0 4px 0 hsl(174,5%,66%),
+  0 5px 0 hsl(174,5%,64%),
+  0 6px 0 hsl(174,5%,62%),
+  0 7px 0 hsl(174,5%,61%),
+  0 8px 0 hsl(174,5%,60%),
+  0 9px 0 rgba(140,140,140,0.8), /* Optional */
+  /* shadows */
+  0 0    5px  rgba(0,0,0,.05),
+  0 1px  3px  rgba(0,0,0,.2),
+  0 3px  5px  rgba(0,0,0,.2),
+  0 5px  10px rgba(0,0,0,.2),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.3);
 }
 
 .child-mb-1 > * { margin-bottom: 0.25rem !important; }
