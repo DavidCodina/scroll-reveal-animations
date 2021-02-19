@@ -42,7 +42,7 @@ pre {
   overflow:scroll;
 }
 
-.text-white-3d {
+.text-white-3d-1 {
   -webkit-text-stroke-width: 1px;                   /* Optional */
   -webkit-text-stroke-color: rgba(150,150,150,0.5); /* Optional */
   font-size: 40px;
@@ -60,6 +60,34 @@ pre {
   0 7px 0 hsl(174,5%,61%),
   0 8px 0 hsl(174,5%,60%),
   0 9px 0 rgba(140,140,140,0.8), /* Optional */
+  /* shadows */
+  0 0    5px  rgba(0,0,0,.05),
+  0 1px  3px  rgba(0,0,0,.2),
+  0 3px  5px  rgba(0,0,0,.2),
+  0 5px  10px rgba(0,0,0,.2),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.3);
+}
+
+
+.text-white-3d {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(150,150,150,0.5);
+  font-size: 40px;
+  font-family: Montserrat;
+  color: #FFF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow:
+  0 1px 0 hsl(174,5%,80%),
+  0 2px 0 hsl(174,5%,78%),
+  0 3px 0 hsl(174,5%,76%),
+  0 4px 0 hsl(174,5%,74%),
+  0 5px 0 hsl(174,5%,72%),
+  0 6px 0 hsl(174,5%,70%),
+  0 7px 0 hsl(174,5%,68%),
+  0 8px 0 hsl(174,5%,64%),
+  0 9px 0 rgba(140,140,140,0.5), /* Optional
   /* shadows */
   0 0    5px  rgba(0,0,0,.05),
   0 1px  3px  rgba(0,0,0,.2),
